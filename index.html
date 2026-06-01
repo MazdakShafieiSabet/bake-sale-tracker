@@ -3,17 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mark's Tracker</title>
+<title>Europagymnasium Bake Sale</title>
 
 <style>
 body {
     font-family: Arial, sans-serif;
-    color: whitesmoke;
-    background: linear-gradient(
-        to bottom right,
-        #1B1A55,
-        #070F2B
-    );
+    color: #512B81;
+    background-image: url('img.gif');
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,6 +31,7 @@ body {
     height: 35px;
     background: #9290C3;
     border-radius: 10px;
+    border: 2px solid #512B81;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
@@ -64,11 +61,14 @@ body {
     <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
     </div>
+    <div style="margin-top: 8px; font-size: 14px; color: #333;">
+        <em>Initiative to support and defend democracy</em>
+    </div>
 </div>
 
 <script>
     // Hard-coded values
-    const currentValue = 5000;
+    const currentValue = 0;
     const targetValue = 10000;
     
     // Calculate percentage internally
@@ -80,7 +80,7 @@ body {
     // Update UI
     progressBar.style.width = progressPercent + "%";
     
-    infoText.textContent = `Goal Progress: €${currentValue.toLocaleString()} of €${targetValue.toLocaleString()}`;
+    infoText.textContent = `Bake Sale Money Target: €${currentValue.toLocaleString()} of €${targetValue.toLocaleString()}`;
 </script>
 
 </body>
