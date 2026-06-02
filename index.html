@@ -22,7 +22,6 @@ body {
     position: relative;
 }
 
-/* Background image — covers the full viewport */
 .bg {
     position: fixed;
     inset: 0;
@@ -38,12 +37,12 @@ body {
 
 .bg img {
     object-fit: cover;
-    object-position: center bottom; /* anchor crowd to bottom on both crops */
+    object-position: center bottom;
 }
 
-/* Content card sits above the background */
 .wrapper {
     position: relative;
+    margin-top: -20%;
     z-index: 1;
     width: min(640px, 90vw);
     background: rgba(255, 255, 255, 0.55);
@@ -91,12 +90,10 @@ body {
 
 <div class="bg" aria-hidden="true">
     <picture>
-        <!-- Portrait GIF on narrow screens (phones) -->
         <source
             media="(max-width: 767px)"
             srcset="img-mobile.gif"
         >
-        <!-- Landscape GIF on wider screens (tablets, desktops) -->
         <img
             src="img-desktop.gif"
             alt=""
